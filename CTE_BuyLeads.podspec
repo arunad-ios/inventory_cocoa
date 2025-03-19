@@ -1,9 +1,9 @@
 Pod::Spec.new do |spec|
   spec.name          = 'CTE_BuyLeads'
-  spec.version       = '1.0.1'
+  spec.version       = '1.0.2'
   spec.summary       = 'CTE_BuyLeads'
   spec.description   = 'CTE_BuyLeads Module'
-  spec.homepage      = 'https://github.com/arunad-ios/inventory_cocoa'
+  spec.homepage      = 'https://cocoapods.org/pods/CTE_BuyLeads'
   spec.author        = { 'arunad-ios' => 'arunakumari.d@cartrade.com' }
 spec.license = { :type => 'MIT', :text => <<-LICENSE
     Copyright (c) 2025 Your Company
