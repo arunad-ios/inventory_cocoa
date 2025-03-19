@@ -22,7 +22,13 @@ Pod::Spec.new do |s|
 
   s.ios.deployment_target = '12.0'
 
-   s.source_files = 'Inventory_cocoa/**/*.swift'
+  # s.source_files = 'Inventory_cocoa/**'
+   
+   
+    # ✅ Correct path
+    s.source_files  = "**/*.swift"
+
+   
 # InventorySwiftCocoapods/Classes/**/*
 
   # s.public_header_files = 'Pod/Classes/**/*.h'

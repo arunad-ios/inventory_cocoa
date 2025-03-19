@@ -8,9 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		478FEE322D88476400C3D828 /* Inventory_cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 478FEE272D88476300C3D828 /* Inventory_cocoa.framework */; };
-		478FEE6A2D884B4600C3D828 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 478FEE652D884B4600C3D828 /* LICENSE */; };
 		478FEE6B2D884B4600C3D828 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 478FEE662D884B4600C3D828 /* README.md */; };
-		478FEE7B2D884F7800C3D828 /* inventory.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 478FEE7A2D884F7800C3D828 /* inventory.podspec */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,9 +24,7 @@
 /* Begin PBXFileReference section */
 		478FEE272D88476300C3D828 /* Inventory_cocoa.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Inventory_cocoa.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		478FEE312D88476400C3D828 /* Inventory_cocoaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Inventory_cocoaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		478FEE652D884B4600C3D828 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		478FEE662D884B4600C3D828 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		478FEE7A2D884F7800C3D828 /* inventory.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = inventory.podspec; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -48,11 +44,6 @@
 				478FEE392D88476400C3D828 /* Exceptions for "Inventory_cocoa" folder in "Inventory_cocoa" target */,
 			);
 			path = Inventory_cocoa;
-			sourceTree = "<group>";
-		};
-		478FEE352D88476400C3D828 /* Inventory_cocoaTests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = Inventory_cocoaTests;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -81,7 +72,6 @@
 			children = (
 				478FEE7C2D88538C00C3D828 /* Podspec */,
 				478FEE292D88476300C3D828 /* Inventory_cocoa */,
-				478FEE352D88476400C3D828 /* Inventory_cocoaTests */,
 				478FEE282D88476300C3D828 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -98,9 +88,7 @@
 		478FEE7C2D88538C00C3D828 /* Podspec */ = {
 			isa = PBXGroup;
 			children = (
-				478FEE652D884B4600C3D828 /* LICENSE */,
 				478FEE662D884B4600C3D828 /* README.md */,
-				478FEE7A2D884F7800C3D828 /* inventory.podspec */,
 			);
 			path = Podspec;
 			sourceTree = "<group>";
@@ -135,8 +123,6 @@
 				478FEE292D88476300C3D828 /* Inventory_cocoa */,
 			);
 			name = Inventory_cocoa;
-			packageProductDependencies = (
-			);
 			productName = Inventory_cocoa;
 			productReference = 478FEE272D88476300C3D828 /* Inventory_cocoa.framework */;
 			productType = "com.apple.product-type.framework";
@@ -154,12 +140,7 @@
 			dependencies = (
 				478FEE342D88476400C3D828 /* PBXTargetDependency */,
 			);
-			fileSystemSynchronizedGroups = (
-				478FEE352D88476400C3D828 /* Inventory_cocoaTests */,
-			);
 			name = Inventory_cocoaTests;
-			packageProductDependencies = (
-			);
 			productName = Inventory_cocoaTests;
 			productReference = 478FEE312D88476400C3D828 /* Inventory_cocoaTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -207,9 +188,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				478FEE6A2D884B4600C3D828 /* LICENSE in Resources */,
 				478FEE6B2D884B4600C3D828 /* README.md in Resources */,
-				478FEE7B2D884F7800C3D828 /* inventory.podspec in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
