@@ -1,5 +1,5 @@
 Pod::Spec.new do |spec|
-  spec.name          = 'coreLib'
+  spec.name          = 'BuyLeads'
   spec.version       = '1.0.0'
   spec.summary       = 'Core Library for NoMansLand'
   spec.description   = 'This is an Core Library which will help us in achieving nothing'
