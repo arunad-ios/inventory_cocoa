@@ -25,8 +25,8 @@ Pod::Spec.new do |s|
   # s.source_files = 'Inventory_cocoa/**'
    
    
-    # ✅ Correct path
-    s.source_files  = "**/*.swift"
+  s.source_files  = "inventory_cocoa/*.swift"
+  s.resources = 'inventory_cocoa/*.xcdatamodeld'
 
    
 # InventorySwiftCocoapods/Classes/**/*

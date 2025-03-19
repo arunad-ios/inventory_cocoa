@@ -8,7 +8,7 @@
 import UIKit
 import CoreData
 
-class InventoryAPIManager: NSObject {
+public class InventoryAPIManager: NSObject {
     
 
         var m_ModelManager: InventoryModelManager = InventoryModelManager()
