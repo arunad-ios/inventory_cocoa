@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name          = 'CTE_BuyLeads'
-  spec.version       = '1.0.5'
+  spec.version       = '1.0.6'
   spec.summary       = 'CTE_BuyLeads'
   spec.description   = 'CTE_BuyLeads Module'
   spec.homepage      = 'https://cocoapods.org/pods/CTE_BuyLeads'
@@ -10,7 +10,7 @@ spec.license = { :type => 'MIT', :text => <<-LICENSE
     Permission is hereby granted...
     LICENSE
 }
-
+   spec.static_framework = true
   spec.source        = { :git => 'https://github.com/arunad-ios/inventory_cocoa.git', :tag => spec.version.to_s }
   spec.swift_version = '5.0'
   spec.ios.deployment_target = '13.0'
