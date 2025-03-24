@@ -27,6 +27,7 @@ public class MyPodManager {
 
 public  class Inventory{
     
+    public var user_id = ""
     public init(){}
     public func printMessage(messageString:String){
         print(messageString + "from Framework vikram")
@@ -43,9 +44,18 @@ public  class Inventory{
         }
     }
     
+    
     public func getSyncStatus()->Bool{
+        NotificationCenter.default.addObserver(self, selector: #selector(receiveData(_:)), name: NSNotification.Name("MyPodEvent"), object: nil)
+
         return InventoryUserDefaults.sharedInstance.getSyncStatus()
     }
+    @objc func receiveData(_ notification: Notification) {
+           if let data = notification.userInfo?["data"] as? String {
+               print("Pod received data from Host App: \(data)")
+           }
+       }
+   
     public func getMakeList()->[String]{
         return InventoryAPIManager.sharedInstance.getMakes() as! [String]
     }
@@ -63,7 +73,7 @@ func callMakeModelAPIs(){
         let paramsDic = ["action":"loadmodels3_ios",
                          "api_id":"cteios2020v3.0",
                          "app_code":"ABD4CEE8-C8FA-48AA-8806-BC4FBD81E4BC",
-                         "dealer_id":"77708",
+                         "dealer_id":user_id,
                          "device_id":"ABD4CEE8-C8FA-48AA-8806-BC4FBD81E4BC",
                          "ios_version_code":"12.2",
                          "iosversion":"2",
