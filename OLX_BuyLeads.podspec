@@ -1,8 +1,8 @@
 Pod::Spec.new do |spec|
-  spec.name          = 'CTE_BuyLeads'
+  spec.name          = 'OLX_BuyLeads'
   spec.version       = '1.0.7'
-  spec.summary       = 'CTE_BuyLeads'
-  spec.description   = 'CTE_BuyLeads Module'
+  spec.summary       = 'OLX_BuyLeads'
+  spec.description   = 'OLX_BuyLeads Module'
   spec.homepage      = 'https://cocoapods.org/pods/CTE_BuyLeads'
   spec.author        = { 'arunad-ios' => 'arunakumari.d@cartrade.com' }
 spec.license = { :type => 'MIT', :text => <<-LICENSE
@@ -14,7 +14,7 @@ spec.license = { :type => 'MIT', :text => <<-LICENSE
   spec.source        = { :git => 'https://github.com/arunad-ios/inventory_cocoa.git', :tag => spec.version.to_s }
   spec.swift_version = '5.0'
   spec.ios.deployment_target = '13.0'
- spec.source_files  = "inventory_cocoa/**/*.{h,m,swift}","inventory_cocoa/*.{h,m,swift}"
+ spec.source_files  = "inventory_cocoa/**/*.{h,m,swift}"
  # spec.resources = 'inventory_cocoa/*.xcdatamodeld'
  # spec.ios.vendored_frameworks = [
   #  "Frameworks/auth_library.xcframework",
