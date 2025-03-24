@@ -8,6 +8,23 @@
 import Foundation
 import CoreData
 
+@objc public protocol HostAppToPodDelegate {
+    func sendDataToPod(data: String)
+}
+
+public class MyPodManager {
+    public static var makes = [String]()
+    public static var delegate: HostAppToPodDelegate?
+
+    public static func requestDataFromHost(makes : [String]) {
+        print("Pod: Requesting data from Host App...")
+        print(makes)
+        self.makes = makes
+        delegate?.sendDataToPod(data: "Pod needs user info")
+    }
+}
+
+
 public  class Inventory{
     
     public init(){}

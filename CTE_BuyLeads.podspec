@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name          = 'CTE_BuyLeads'
-  spec.version       = '1.0.3'
+  spec.version       = '1.0.4'
   spec.summary       = 'CTE_BuyLeads'
   spec.description   = 'CTE_BuyLeads Module'
   spec.homepage      = 'https://cocoapods.org/pods/CTE_BuyLeads'
