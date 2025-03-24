@@ -7,6 +7,7 @@
 
 import Foundation
 import CoreData
+import UIKit
 
 @objc public protocol HostAppToPodDelegate {
     func sendDataToPod(data: String)
@@ -16,55 +17,52 @@ public class MyPodManager {
     public static var makes = [String]()
     public static var delegate: HostAppToPodDelegate?
 
-    public static func requestDataFromHost(makes : [String]) {
-        print("Pod: Requesting data from Host App...")
-        print(makes)
-        self.makes = makes
+    public static func requestDataFromHost() {
+      //  print("Pod: Requesting data from Host App...")
+       // print(makes)
+       // self.makes = makes
         delegate?.sendDataToPod(data: "Pod needs user info")
     }
 }
 
+
+import UIKit
+
+public class SDKAlertManager {
+    public static func showAlert() {
+        guard let topVC = UIApplication.shared.windows.first?.rootViewController else {
+            print("No root view controller found")
+            return
+        }
+        let alert = UIAlertController(title: "SDK Alert", message: "Hello from SDK!", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        DispatchQueue.main.async {
+            topVC.present(alert, animated: true, completion: nil)
+        }
+    }
+}
 
 public  class Inventory{
     
     public var user_id = ""
     public init(){}
     public func printMessage(messageString:String){
-        print(messageString + "from Framework vikram")
+        print(messageString + "from CTE_Buyleads Framework ")
     }
     
     
-    public func setupInventoryFramework(){
-        
-        InventoryAPIManager.sharedInstance.loadData()
-        if InventoryUserDefaults.sharedInstance.getSyncStatus(){
-            
-        }else {
-            callMakeModelAPIs()
-        }
-    }
+    
+  
     
     
-    public func getSyncStatus()->Bool{
-        NotificationCenter.default.addObserver(self, selector: #selector(receiveData(_:)), name: NSNotification.Name("MyPodEvent"), object: nil)
-
-        return InventoryUserDefaults.sharedInstance.getSyncStatus()
-    }
+   
     @objc func receiveData(_ notification: Notification) {
            if let data = notification.userInfo?["data"] as? String {
                print("Pod received data from Host App: \(data)")
            }
        }
    
-    public func getMakeList()->[String]{
-        return InventoryAPIManager.sharedInstance.getMakes() as! [String]
-    }
-    public func getModelList()->[String]{
-        return InventoryAPIManager.sharedInstance.getModels() as! [String]
-    }
-    public func getVarianList()->[String]{
-        return InventoryAPIManager.sharedInstance.getVariants() as! [String]
-    }
+   
 
     // MARK: - API Calling
     
@@ -111,8 +109,8 @@ func callMakeModelAPIs(){
             do {
                 if let jsonResponse = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any] {
                     print("Response JSON: \(jsonResponse)")
-                    InventorySaveDataIntoDB.sharedInstance.saveMakesModelsAndVariantsIntoDB(response: jsonResponse)
-                    InventoryUserDefaults.sharedInstance.saveSyncStatus(status: true)
+                  //  InventorySaveDataIntoDB.sharedInstance.saveMakesModelsAndVariantsIntoDB(response: jsonResponse)
+                 //   InventoryUserDefaults.sharedInstance.saveSyncStatus(status: true)
                 } else {
                     print("Failed to parse JSON")
                 }

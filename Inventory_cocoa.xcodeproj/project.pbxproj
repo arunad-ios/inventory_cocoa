@@ -103,7 +103,6 @@
 				D62A95C28739BF9B7D7BCD19 /* Pods-Inventory_cocoa.debug.xcconfig */,
 				81B06319F9DF1A0372AA0BAA /* Pods-Inventory_cocoa.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
